@@ -6,9 +6,9 @@ export default {
             fontFamily: {
                 inter: ["Inter", "sans-serif"],
             },
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-            },
+            screens: {
+                'my': { max: '670px' }
+            }
         },
     },
     plugins: [],
