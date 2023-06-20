@@ -5,7 +5,7 @@ import whatsappIcon from "../assets/svg/whatsapp.svg";
 import React, { useState } from "react";
 
 export const LinkIcons: React.FC = () => {
-    const [isHovering, setHover] = useState<boolean>(true);
+    const [isHovering, setHover] = useState<boolean>(false);
 
     return (
         <div
