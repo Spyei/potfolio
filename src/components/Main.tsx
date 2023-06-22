@@ -9,6 +9,6 @@ export const Main: React.FC = () => {
         case 1:
             return <InitInfos setPage={setPage} />;
         case 2:
-            return <Projects setPage={setPage}/>;
+            return <Projects setPage={setPage} />;
     }
 };
