@@ -9,7 +9,7 @@ export const LinkIcons: React.FC = () => {
 
     return (
         <div
-            className={`flex text-white flex-col my:flex-row my:items-center my:justify-center my:mr-0 mr-4 my:h-[100px] h-[180px]`}
+            className={`flex text-white flex-col my:flex-row my:items-center my:justify-center my:mb-[0px] mb-[90px] my:mr-0 mr-4 my:h-[100px] h-[180px]`}
         >
             <a
                 onMouseEnter={() => {
