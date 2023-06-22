@@ -1,5 +1,5 @@
 import githubIcon from "../assets/svg/github.svg";
-import linkedinIcon from "../assets/svg/linkedin.svg";
+import discordIcon from "../assets/svg/discord.svg";
 import instagramIcon from "../assets/svg/instagram.svg";
 import whatsappIcon from "../assets/svg/whatsapp.svg";
 import React, { useState } from "react";
@@ -38,19 +38,19 @@ export const LinkIcons: React.FC = () => {
                     setHover(false);
                 }}
                 className="w-[100%] flex gap-2 items-center justify-start transition-all h-[40px] duration-300"
-                href=""
+                href="https://discord.com/users/955095844275781693"
             >
                 <img
                     className="h-[30px]"
-                    src={linkedinIcon}
-                    alt="Linkedin Icon"
+                    src={discordIcon}
+                    alt="Discord Icon"
                 />
                 <div
                     className={`transition-all duration-300 text-center  text-neutral-300 hover:text-white ${
                         isHovering ? "text-[16px] ml-1" : "text-[0px]"
                     }`}
                 >
-                    Linkedin
+                    Discord
                 </div>
             </a>
             <a
