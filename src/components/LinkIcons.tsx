@@ -9,7 +9,7 @@ export const LinkIcons: React.FC = () => {
 
     return (
         <div
-            className={`flex text-white flex-col my:flex-row my:items-center my:justify-center mr-4 my:h-[100px] h-[180px]`}
+            className={`flex text-white flex-col my:flex-row my:items-center my:justify-center my:mr-0 mr-4 my:h-[100px] h-[180px]`}
         >
             <a
                 onMouseEnter={() => {
@@ -24,7 +24,7 @@ export const LinkIcons: React.FC = () => {
                 <img className="h-[30px]" src={githubIcon} alt="Github Icon" />
                 <div
                     className={`transition-all duration-300 text-center flex items-center justify-center  text-neutral-300 hover:text-white ${
-                        isHovering ? "text-[16px] ml-2" : "text-[0px]"
+                        isHovering ? "text-[16px] ml-2 my:text-[0px]" : "text-[0px]"
                     }`}
                 >
                     Github
@@ -47,7 +47,7 @@ export const LinkIcons: React.FC = () => {
                 />
                 <div
                     className={`transition-all duration-300 text-center  text-neutral-300 hover:text-white ${
-                        isHovering ? "text-[16px] ml-1" : "text-[0px]"
+                        isHovering ? "text-[16px] ml-1 my:text-[0px]" : "text-[0px]"
                     }`}
                 >
                     Discord
@@ -70,7 +70,7 @@ export const LinkIcons: React.FC = () => {
                 />
                 <div
                     className={`transition-all duration-300 text-center  text-neutral-300 hover:text-white ${
-                        isHovering ? "text-[16px]" : "text-[0px]"
+                        isHovering ? "text-[16px] my:text-[0px]" : "text-[0px]"
                     }`}
                 >
                     Instagram
@@ -93,7 +93,7 @@ export const LinkIcons: React.FC = () => {
                 />
                 <div
                     className={`transition-all duration-300 text-center  text-neutral-300 hover:text-white ${
-                        isHovering ? "text-[16px]" : "text-[0px]"
+                        isHovering ? "text-[16px] my:text-[0px]" : "text-[0px]"
                     }`}
                 >
                     Whatsapp
