@@ -3,7 +3,7 @@ import React from "react";
 
 export const Main: React.FC = () => {
     return (
-        <section className="h-[100vh] bg-[#000] from-[1%] w-full flex-row my:flex-col-reverse flex items-center justify-center">
+        <main className="h-[100vh] bg-[#000] from-[1%] w-full flex-row my:flex-col-reverse flex items-center justify-center">
             <LinkIcons />
             <div>
                 <div className="text-neutral-400 items-end flex my:justify-center m-1 w-[100%]">
@@ -24,6 +24,6 @@ export const Main: React.FC = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </main>
     );
 };
