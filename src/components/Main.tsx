@@ -3,13 +3,13 @@ import React from "react";
 
 export const Main: React.FC = () => {
     return (
-        <main className="h-[100vh] bg-[#000] from-[1%] w-full flex-row my:flex-col-reverse flex items-center justify-center">
+        <main className="h-[100vh] bg-[#000] w-full flex-row my:flex-col-reverse flex items-center justify-center">
             <LinkIcons />
             <div>
                 <div className="text-neutral-400 items-end flex my:justify-center m-1 w-[100%]">
                     <div>Oie 👋 eu sou o Caio.</div>
                 </div>
-                <div className="inter my:w-[80vw] items-center justify-center flex flex-col text-white">
+                <div className="inter my:w-[80vw] items-start justify-center flex flex-col text-white">
                     <h1 className="flex my:h-[50px] h-[90px] items-center my:text-[50px] text-[100px] font-sans font-extrabold">
                         FRONT-END
                     </h1>
