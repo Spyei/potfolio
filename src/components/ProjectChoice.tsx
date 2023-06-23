@@ -20,11 +20,17 @@ export const ProjectChoice: React.FC<{
                             alt="Exit Button"
                         />
                     </button>
-                    <span className="w-[30vw] text-center">Botlist-Website</span>
+                    <span className="w-[30vw] text-center">
+                        Botlist-Website
+                    </span>
                 </div>
                 <div className="flex flex-col items-center h-[160px] justify-center gap-3">
-                    <button className="border-2 p-2 rounded-lg w-[200px] transition-colors duration-300 hover:bg-neutral-900">Repositório</button>
-                    <button className="border-2 p-2 rounded-lg w-[200px] transition-colors duration-300 hover:bg-neutral-900">Preview</button>
+                    <button className="border-2 p-2 border-neutral-500 rounded-lg w-[200px] transition-colors duration-300 hover:bg-neutral-500">
+                        Repositório
+                    </button>
+                    <button className="border-2 p-2 border-neutral-500 rounded-lg w-[200px] transition-colors duration-300 hover:bg-neutral-500">
+                        Acessar
+                    </button>
                 </div>
             </div>
         </div>
