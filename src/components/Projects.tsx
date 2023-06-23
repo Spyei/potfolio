@@ -8,7 +8,7 @@ export const Projects: React.FC<{
     const [panel, setPanel] = useState<boolean>(false);
 
     return (
-        <section className="bg-black w-[100vw] text-white h-[100vh]">
+        <section className="bg-black w-[100vw] text-white">
             <div className="flex items-center justify-center flex-col">
                 <div className="flex flex-col items-center">
                     <h1 className="text-[43px] my-3">
@@ -39,7 +39,7 @@ export const Projects: React.FC<{
                 </button>
             </div>
             <div>
-                <Repos/>
+                <Repos setPanel={setPanel}/>
             </div>
             <button
                 onClick={() => {

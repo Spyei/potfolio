@@ -3,4 +3,5 @@ export interface UserRepos {
     fullname: string;
     language: string;
     description: string;
+    id: string;
 }
