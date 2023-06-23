@@ -10,7 +10,7 @@ export const RepoLangs: React.FC<{
         const fetchLanguages = async () => {
             try {
                 const response = await axios.get(
-                    `https://api.github.com/repos/${repoName}languages`,
+                    `https://api.github.com/repos/${repoName}/languages`,
                     {
                         headers: {
                             Authorization:
@@ -25,18 +25,14 @@ export const RepoLangs: React.FC<{
                 console.error(error);
             }
         };
-
         fetchLanguages();
     }, [repoName]);
 
     return (
-        <div>
-            <h3>Linguagens do Repositório:</h3>
-            <ul>
-                {languages.map((language) => (
-                    <li key={language}>{language}</li>
+        <>
+            {languages.map((language) => (
+                    <i key={language} className={`devicon-${language?.replace('HTML', 'react').replace('CSS', 'tailwindcss').toLowerCase()}-plain colored`}></i>
                 ))}
-            </ul>
-        </div>
+        </>
     );
 };

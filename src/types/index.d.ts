@@ -1,7 +1,6 @@
 export interface UserRepos {
     name: string;
-    fullname: string;
-    language: string;
+    full_name: string;
     description: string;
     id: string;
 }

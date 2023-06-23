@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { UserRepos } from "../types";
+import { RepoLangs } from "./RepoLangs";
 
 export const Repos: React.FC<{
     setPanel: (value: boolean) => void;
@@ -45,11 +46,12 @@ export const Repos: React.FC<{
                                             {repo.name}
                                         </h1>
                                         <div className="break-words w-full text-left h-[72px]">
-                                            {repo.description || "Nenhuma descrição foi fornecida."}
+                                            {repo.description ||
+                                                "Nenhuma descrição foi fornecida."}
                                         </div>
                                     </div>
                                     <div className="flex mx-3 mb-3 gap-[6px] bg-neutral-800 p-[6px] rounded-lg border-2">
-                                        <i className={`devicon-${repo.language?.toLowerCase()}-plain colored`}></i>
+                                        <RepoLangs repoName={repo.full_name} />
                                     </div>
                                 </button>
                             </div>
