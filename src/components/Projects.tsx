@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { UserRepos } from "../types";
+import { ProjectChoice } from "./ProjectChoice";
 
 export const Projects: React.FC<{
     setPage: (value: number) => void;
 }> = ({ setPage }) => {
     const [repos, setRepos] = useState<UserRepos>();
+    const [panel, setPanel] = useState<boolean>(false);
 
     useEffect(() => {
         try {
@@ -32,7 +34,12 @@ export const Projects: React.FC<{
                     </h1>
                     <hr className="w-[90vw] mb-6" />
                 </div>
-                <button className="flex flex-col bg-neutral-900 transition-colors duration-300 hover:bg-neutral-800 rounded-lg border-2 border-white">
+                <button
+                    onClick={() => {
+                        setPanel(true);
+                    }}
+                    className="flex flex-col bg-neutral-900 transition-colors duration-300 hover:bg-neutral-800 rounded-lg border-2 border-white"
+                >
                     <div className="p-2 flex flex-col gap-1">
                         <h1 className="text-[19px] text-left">
                             Botlist-Website
@@ -57,6 +64,9 @@ export const Projects: React.FC<{
             >
                 Voltar
             </button>
+            <section className={`transiton-opacity duration-300 ${panel ? 'visible opacity-100' : 'invisible opacity-0'}`}>
+                <ProjectChoice setPanel={setPanel}/>
+            </section>
         </section>
     );
 };
