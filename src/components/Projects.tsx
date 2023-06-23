@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { UserRepos } from "../types";
+import React, { useState } from "react";
 import { ProjectChoice } from "./ProjectChoice";
+import { Repos } from "./Repos";
 
 export const Projects: React.FC<{
     setPage: (value: number) => void;
 }> = ({ setPage }) => {
-    const [repos, setRepos] = useState<UserRepos>();
     const [panel, setPanel] = useState<boolean>(false);
-
-    useEffect(() => {
-        try {
-            axios
-                .get<UserRepos>("https://api.github.com/user/repos", {
-                    headers: {
-                        Authorization: "Bearer " + import.meta.env.VITE_API_KEY,
-                    },
-                })
-                .then((res: { data: UserRepos }) => {
-                    setRepos(res.data);
-                });
-        } catch (error: unknown) {
-            console.error(error);
-        }
-    }, []);
 
     return (
         <section className="bg-black w-[100vw] text-white h-[100vh]">
@@ -56,7 +38,9 @@ export const Projects: React.FC<{
                     </div>
                 </button>
             </div>
-            {repos ? <div>repos aqui</div> : <div>Loading...</div>}
+            <div>
+                <Repos/>
+            </div>
             <button
                 onClick={() => {
                     setPage(1);
