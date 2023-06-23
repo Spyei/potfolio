@@ -38,7 +38,7 @@ export const Projects: React.FC<{
                     </div>
                 </button>
             </div>
-            <div>
+            <div className="overflow-x-hidden">
                 <Repos setPanel={setPanel}/>
             </div>
             <button
