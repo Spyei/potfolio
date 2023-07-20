@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { InitInfos } from "./components/InitInfos";
-import { Projects } from "./components/Projects";
+import { Projects } from "./components/ProjectsOld";
 
 function App () {
     const [page, setPage] = useState<number>(1);
@@ -11,6 +11,6 @@ function App () {
         case 2:
             return <Projects setPage={setPage} />;
     }
-};
+}
 
 export default App;
