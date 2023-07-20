@@ -6,15 +6,17 @@ export const InitInfos: React.FC<{
 }> = ({ setPage }) => {
     const [arrowState, setArrowState] = useState<boolean>(false);
     const [click, setClick] = useState<boolean>(false);
-
+    
     return (
         <main className="h-[100vh] bg-[#000] w-full flex-row my:flex-col-reverse flex items-center justify-center">
             <section
                 className={`transition-all duration-500 flex justify-center items-center my:flex-col-reverse ${
                     click && "opacity-0 invisible"
-                }`}
+                }`} 
             >
-                <LinkIcons />
+                <div className="w-[120px]">
+                    <LinkIcons />
+                </div>
                 <div className="flex flex-col gap-10 items-center justify-items-center">
                     <div>
                         <div className="text-neutral-400 items-end flex my:justify-center m-1 w-[100%]">
