@@ -13,7 +13,7 @@ const Project: FC<{
 
     return (
         <>
-            <button onClick={() => setPanel(true)} className="bg-black w-[500px] rounded-lg p-2 gap-3 transition-all hover:scale-110 hover:bg-neutral-800">
+            <button onClick={() => setPanel(true)} className="bg-black w-[500px] my:w-[90vw] rounded-lg p-2 gap-3 transition-all hover:scale-110 hover:bg-neutral-800">
                 <div className="border-2 border-gray-300 rounded-lg">
                     <img src={img} className="h-[70%] bg-neutral-800 object-fill rounded-t-lg" />
                 </div>
