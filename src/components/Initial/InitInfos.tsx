@@ -26,10 +26,10 @@ const InitInfos: FC = () => {
                     <div className="w-[120px]">
                         <LinkIcons />
                     </div>
-                    <div className="flex flex-col gap-10 items-center justify-items-center">
+                    <div className="flex flex-col gap-10 items-center">
                         <div>
-                            <div className="text-neutral-400 items-end flex my:justify-center m-1 w-[100%]">
-                                <div>Olá 👋 me chamo Caio.</div>
+                            <div className="text-neutral-400 flex my:justify-center m-1 w-full my:items-start">
+                                <span>Olá 👋 me chamo Caio.</span>
                             </div>
                             <div className="inter my:w-[80vw] items-start justify-center flex flex-col text-white">
                                 <h1 className="flex my:h-[50px] h-[90px] items-center my:text-[50px] text-[100px] font-sans font-extrabold">
