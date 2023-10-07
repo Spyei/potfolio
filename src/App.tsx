@@ -1,5 +1,5 @@
 import { FC } from "react";
-import InitInfos from "./components/InitInfos";
+import InitInfos from "./components/Initial/InitInfos";
 
 const App: FC = () => {
     return <InitInfos />;

@@ -1,6 +1,6 @@
 import { FC } from "react";
-import LinkIcons from "./Links/LinkIcons";
-import Projects from "./Projects";
+import LinkIcons from "../Links/LinkIcons";
+import Projects from "../Projects/Projects";
 
 const InitInfos: FC = () => {
     return (
