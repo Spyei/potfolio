@@ -1,16 +1,8 @@
-import { useState } from "react";
-import { InitInfos } from "./components/InitInfos";
-import { Projects } from "./components/ProjectsOld";
+import { FC } from "react";
+import InitInfos from "./components/InitInfos";
 
-function App () {
-    const [page, setPage] = useState<number>(1);
-
-    switch (page) {
-        case 1:
-            return <InitInfos setPage={setPage} />;
-        case 2:
-            return <Projects setPage={setPage} />;
-    }
+const App: FC = () => {
+    return <InitInfos />;
 }
 
 export default App;

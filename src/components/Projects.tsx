@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { Project } from "./Project";
+import Project from "./Project";
 
-export const Projectsoi: FC = () => {
+const Projects: FC = () => {
     return (
         <section className="bg-white h-[100vh] w-[100vw]">
             <div className="w-full h-full flex-row grid grid-cols-2 my:grid-cols-1 place-items-center items-center">
@@ -11,3 +11,5 @@ export const Projectsoi: FC = () => {
         </section>
     )
 };
+
+export default Projects;
