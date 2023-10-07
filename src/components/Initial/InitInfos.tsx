@@ -1,8 +1,22 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 import LinkIcons from "../Links/LinkIcons";
 import Projects from "../Projects/Projects";
 
 const InitInfos: FC = () => {
+    const [idade, setIdade] = useState<number>(0);
+
+    useEffect(() => {
+        const dataNascimento: Date = new Date(2007, 8, 8);
+        const dataAtual: Date = new Date();
+        const diffAnos: number = dataAtual.getFullYear() - dataNascimento.getFullYear();
+
+        if (dataAtual.getMonth() < dataNascimento.getMonth() || (dataAtual.getMonth() === dataNascimento.getMonth() && dataAtual.getDate() < dataNascimento.getDate())) {
+            setIdade(diffAnos - 1); 
+        } else {
+            setIdade(diffAnos);
+        }
+    }, []);
+
     return (
         <main>
             <section className="h-[100vh] bg-[#000] w-full flex-row my:flex-col-reverse flex items-center justify-center">
@@ -27,7 +41,7 @@ const InitInfos: FC = () => {
                             </div>
                             <div className="text-neutral-400 w-full flex items-end text-[16px] m-1 justify-end">
                                 <div className="w-[400px] my:w-[80vw]">
-                                    Atualmente tenho 15 anos, com 6 meses de
+                                    Atualmente tenho {idade} anos, com 1 ano de
                                     experiência desenvolvendo meus projetos
                                     pessoais.
                                 </div>
