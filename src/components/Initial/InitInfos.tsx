@@ -1,6 +1,8 @@
 import { FC, useState, useEffect } from "react";
 import LinkIcons from "../Links/LinkIcons";
 import Projects from "../Projects/Projects";
+import * as icon from "react-icons/bi";
+import { HiChevronDoubleDown } from "react-icons/hi";
 
 const InitInfos: FC = () => {
     const [idade, setIdade] = useState<number>(0);
@@ -11,7 +13,7 @@ const InitInfos: FC = () => {
         const diffAnos: number = dataAtual.getFullYear() - dataNascimento.getFullYear();
 
         if (dataAtual.getMonth() < dataNascimento.getMonth() || (dataAtual.getMonth() === dataNascimento.getMonth() && dataAtual.getDate() < dataNascimento.getDate())) {
-            setIdade(diffAnos - 1); 
+            setIdade(diffAnos - 1);
         } else {
             setIdade(diffAnos);
         }
@@ -19,10 +21,8 @@ const InitInfos: FC = () => {
 
     return (
         <main>
-            <section className="h-[100vh] bg-[#000] w-full flex-row my:flex-col-reverse flex items-center justify-center">
-                <div
-                    className="transition-all duration-500 flex justify-center items-center my:flex-col-reverse"
-                >
+            <section className="h-[100vh] bg-[#000] w-full flex-col flex items-center justify-center">
+                <div className="transition-all duration-500 flex justify-center items-center my:flex-col">
                     <div className="w-[120px]">
                         <LinkIcons />
                     </div>
@@ -48,6 +48,15 @@ const InitInfos: FC = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="flex my:gap-4 text-white flex-col my:flex-row my:items-center my:justify-center ml-2 my:ml-0 my:mt-6">
+                        <icon.BiLogoJavascript fill="#FFDF00" size={35} />
+                        <icon.BiLogoTypescript fill="#0379CC" size={35} />
+                        <icon.BiLogoReact fill="#00D8FE" size={35} />
+                        <icon.BiLogoTailwindCss fill="#38BDF8" size={35} />
+                    </div>
+                </div>
+                <div className="bottom-4 absolute flex flex-col">
+                    <HiChevronDoubleDown fill="#ffffff" className="animate-bounce" size={40} />
                 </div>
             </section>
             <div className="w-[100vw] h-[40px] bg-black flex flex-row">
