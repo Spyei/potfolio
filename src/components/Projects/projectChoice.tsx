@@ -17,11 +17,13 @@ export const ProjectChoice: FC<{
                     <span className="flex-grow flex text-center ml-[30px]"><strong>{name}</strong></span>
                 </div>
                 <div className="flex flex-col items-center h-[160px] justify-center gap-3 w-[100%]">
-                    <a href={repo} target="_blank" className="text-center border-2 p-2 rounded-lg border-neutral-600 w-[200px] transition-colors duration-300 hover:bg-neutral-600">
+                    <a href={repo} target="_blank" className="flex items-center justify-center gap-3 text-center border-2 p-2 rounded-lg border-neutral-600 w-[200px] transition-colors duration-300 hover:bg-neutral-600">
+                        <icon.BsGithub size={20}/>
                         <span>Repositório</span>
                     </a>
                     {project && (
-                        <a href={project} target="_blank" className="text-center border-2 border-neutral-600 p-2 rounded-lg w-[200px] transition-colors duration-300 hover:bg-neutral-600">
+                        <a href={project} target="_blank" className="flex items-center justify-center gap-3 text-center border-2 border-neutral-600 p-2 rounded-lg w-[200px] transition-colors duration-300 hover:bg-neutral-600">
+                            <icon.BsLink size={20}/>
                             <span>Website</span>
                         </a>
                     )}
