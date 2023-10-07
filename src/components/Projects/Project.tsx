@@ -1,22 +1,38 @@
-import { FC } from "react";
+import { FC, ReactNode, useState } from "react";
+import { ProjectChoice } from "./projectChoice";
 
 const Project: FC<{
     name: string;
     repo: string;
     project: string;
     img: string;
-}> = ({ name, repo, project, img }) => {
+    description: string;
+    stacks: ReactNode[]
+}> = ({ name, repo, project, img, stacks, description }) => {
+    const [panel, setPanel] = useState<boolean>();
+
     return (
-        <section className="bg-black h-[400px] w-[500px] rounded-lg">
-            <div>
-                <h1 className="text-center text-white">{name}</h1>
-            </div>
-            <img src={img} className="h-[70%] object-contain bg-neutral-800"/>
-            <div className="flex w-full h-[95px] items-center justify-center gap-10">
-                <button onClick={() => location.href = repo} className="rounded-md bg-neutral-800 text-white w-[140px] h-[50px] border-2 border-neutral-600 transition-colors duration-300 hover:bg-neutral-600">Repositório</button>
-                <button onClick={() => location.href = project} className="rounded-md bg-neutral-800 text-white w-[140px] h-[50px] border-2 border-neutral-600 transition-colors duration-300 hover:bg-neutral-600">Projeto</button>
-            </div>
-        </section>
+        <>
+            <button onClick={() => setPanel(true)} className="bg-black w-[500px] rounded-lg p-2 gap-3 transition-all hover:scale-110 hover:bg-neutral-800">
+                <div className="border-2 border-gray-300 rounded-lg">
+                    <img src={img} className="h-[70%] bg-neutral-800 object-fill rounded-t-lg" />
+                </div>
+                <h1 className="text-center text-white text-[23px]"><strong>{name}</strong></h1>
+                <div className="flex flex-col gap-2 items-center justify-center">
+                    <div className="text-white">
+                        <span>{description}</span>
+                    </div>
+                    <div className="w-full flex items-center text-center flex-col gap-3">
+                        <div className="flex flex-row">
+                            {...stacks}
+                        </div>
+                    </div>
+                </div>
+            </button>
+            <section className={`transiton-opacity duration-300 ${panel ? "visible opacity-100" : "invisible opacity-0"}`}>
+                <ProjectChoice setPanel={setPanel} name={name} repo={repo} project={project} />
+            </section>
+        </>
     )
 }
 
