@@ -3,6 +3,8 @@ import LinkIcons from "../Links/LinkIcons";
 import Projects from "../Projects/Projects";
 import * as icon from "react-icons/bi";
 import { HiChevronDoubleDown } from "react-icons/hi";
+import Contact from "../Contact/Contact";
+import spike from "../../assets/images/spikes.png"
 
 const InitInfos: FC = () => {
     const [idade, setIdade] = useState<number>(0);
@@ -63,13 +65,25 @@ const InitInfos: FC = () => {
                 <div
                     className="bg-center bg-repeat bg-cover"
                     style={{
-                        backgroundImage: "url(https://cdn.discordapp.com/attachments/988397828063772762/1131594877063409735/image.png)",
+                        backgroundImage: `url(${spike})`,
                         width: "100vw",
                         height: "50px"
                     }}
                 ></div>
             </div>
             <Projects />
+            <div className="w-[100vw] h-[40px] bg-black flex flex-row">
+                <div
+                    className="bg-center bg-repeat bg-cover"
+                    style={{
+                        backgroundImage: `url(${spike})`,
+                        width: "100vw",
+                        height: "50px",
+                        rotate: "180deg"
+                    }}
+                ></div>
+            </div>
+            <Contact/>
         </main>
     );
 };
