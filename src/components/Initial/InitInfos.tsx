@@ -61,10 +61,11 @@ const InitInfos: FC = () => {
             </section>
             <div className="w-[100vw] h-[40px] bg-black flex flex-row">
                 <div
-                    className="bg-center bg-repeat bg-cover h-120 "
+                    className="bg-center bg-repeat bg-cover"
                     style={{
-                        backgroundImage: 'url(https://cdn.discordapp.com/attachments/988397828063772762/1131594877063409735/image.png)',
-                        width: '100vw',
+                        backgroundImage: "url(https://cdn.discordapp.com/attachments/988397828063772762/1131594877063409735/image.png)",
+                        width: "100vw",
+                        height: "50px"
                     }}
                 ></div>
             </div>
